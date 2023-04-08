@@ -25,7 +25,7 @@ module.exports = {
                 } else {
                     res.status(401).json({ message: 'invalid mobile or password' }); // unauthorized
                 }
-            } catch {
+            } catch (error) {
                 console.log(error.message);
                 res.status(400).json({ message: 'error occured', err: error.message });
             }
